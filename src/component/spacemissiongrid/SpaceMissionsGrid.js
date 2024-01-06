@@ -22,6 +22,7 @@ const SpaceMissionsGrid = () => {
     { field: 'time' },
     { field: 'rocket' },
     { field: 'price' },
+    {field: 'successful'}
   ]);
   useEffect(() => {
     fetch('https://www.ag-grid.com/example-assets/space-mission-data.json')
@@ -61,7 +62,7 @@ const SpaceMissionsGrid = () => {
 
   return (
     <DashboardWrapper>
-      <div className="ag-theme-alpine" style={{ height: 400, width: "50%" }}>
+      <div className="ag-theme-quartz" style={{ height: 400, width: "50%" }}>
         <AgGridReact
           rowData={rowData}
           columnDefs={columnDefs}>
